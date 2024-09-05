@@ -1,0 +1,24 @@
+[
+  {
+    "fname": "Daniel",
+    "name": "Daniel",
+    "country": "Deutschland",
+    "callsign": "EGGE01",
+    "city": "Nieheim",
+    "surname": "Hartmann",
+    "radio_id": 2650001,
+    "id": 2650001,
+    "state": "NRW"
+  },
+  {
+    "fname": "Dennis",
+    "name": "Dennis",
+    "country": "Deutschland",
+    "callsign": "HP01",
+    "city": "Melle",
+    "surname": "P",
+    "radio_id": 2650002,
+    "id": 2650002,
+    "state": "Niedersachsen"
+  }
+]

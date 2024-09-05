@@ -1,0 +1,36 @@
+[
+  {
+    "locator": "JO41NT",
+    "id": "2659001",
+    "callsign": "RL1HX",
+    "city": "Nieheim",
+    "state": "NRW",
+    "country": "Deutschland",
+    "frequency": "446.193750",
+    "color_code": 1,
+    "offset": "+0.0",
+    "assigned": "Peer",
+    "ts_linked": "TS2",
+    "trustee": "RL1HX",
+    "map_info": "",
+    "map": 1,
+    "ipsc_network": "N8schicht"
+  },
+  {
+    "locator": "JO41OR",
+    "id": "2659002",
+    "callsign": "RL2HX",
+    "city": "Brakel",
+    "state": "NRW",
+    "country": "Deutschland",
+    "frequency": "446.193750",
+    "color_code": 1,
+    "offset": "+0.0",
+    "assigned": "Peer",
+    "ts_linked": "TS2",
+    "trustee": "RL2HX",
+    "map_info": "",
+    "map": 1,
+    "ipsc_network": "N8schicht"
+  }
+]
