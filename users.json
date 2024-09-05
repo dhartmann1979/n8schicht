@@ -1,24 +1,4 @@
-[
-  {
-    "fname": "Daniel",
-    "name": "Daniel",
-    "country": "Deutschland",
-    "callsign": "EGGE01",
-    "city": "Nieheim",
-    "surname": "Hartmann",
-    "radio_id": 2650001,
-    "id": 2650001,
-    "state": "NRW"
-  },
-  {
-    "fname": "Dennis",
-    "name": "Dennis",
-    "country": "Deutschland",
-    "callsign": "HP01",
-    "city": "Melle",
-    "surname": "P",
-    "radio_id": 2650002,
-    "id": 2650002,
-    "state": "Niedersachsen"
-  }
-]
+{"users":[{"fname": "Daniel","name": "Daniel","country": "Deutschland","callsign": "EGGE01","city": "Nieheim","surname": "Hartmann","radio_id": 2650001,"id": 2650001,"state": "NRW"},
+{"fname": "Dennis","name": "Dennis","country": "Deutschland","callsign": "HP01","city": "Melle","surname": "P","radio_id": 2650002,"id": 2650002,"state": "Niedersachsen"},
+{"fname": "Roman","name": "Roman","country": "Deutschland","callsign": "Pitbull","city": "Borgholzhausen","surname": "","radio_id": 2650003,"id": 2650003,"state": "NRW"},
+{"fname": "Stephan","name": "Stephan","country": "Deutschland","callsign": "KRÜMEL","city": "Mindetal","surname": "","radio_id": 2650004,"id": 2650004,"state": "Bayern"}]}
