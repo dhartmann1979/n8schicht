@@ -4,4 +4,5 @@
 {"fname": "Stephan","name": "Stephan","country": "Deutschland","callsign": "KRÜMEL","city": "Mindetal","surname": "","radio_id": 2650004,"id": 2650004,"state": "Bayern"},
 {"fname": "Jens","name": "Jens","country": "Deutschland","callsign": "DW1PBJ","city": "Hövelhof","surname": "","radio_id": 2650005,"id": 2650005,"state": "NRW"},
 {"fname": "---","name": "---","country": "Deutschland","callsign": "---","city": "---","surname": "","radio_id": 2650006,"id": 2650006,"state": "---"},
-{"fname": "Tim","name": "Tim","country": "Deutschland","callsign": "EGGE02","city": "Nieheim","surname": "Hartmann","radio_id": 2650007,"id": 2650007,"state": "NRW"}]}
+{"fname": "Tim","name": "Tim","country": "Deutschland","callsign": "EGGE02","city": "Nieheim","surname": "Hartmann","radio_id": 2650007,"id": 2650007,"state": "NRW"},
+{"fname": "Crosslink","name": "Crosslink","country": "Deutschland","callsign": "XL1DIG","city": "Nieheim","N8schicht": "Hartmann","radio_id": 2659999,"id": 2659999,"state": "NRW"}]}
