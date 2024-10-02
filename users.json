@@ -1,4 +1,5 @@
-{"users":[{"fname": "Daniel","name": "Daniel","country": "Germany","callsign": "EGGE01","city": "Nieheim","surname": "Hartmann","radio_id": 2650001,"id": 2650001,"state": "NRW"},
+{"users":[
+{"fname": "Daniel","name": "Daniel","country": "Germany","callsign": "EGGE01","city": "Nieheim","surname": "Hartmann","radio_id": 2650001,"id": 2650001,"state": "NRW"},
 {"fname": "Dennis","name": "Dennis","country": "Germany","callsign": "HP01","city": "Melle","surname": "P","radio_id": 2650002,"id": 2650002,"state": "Niedersachsen"},
 {"fname": "Roman","name": "Roman","country": "Germany","callsign": "Pitbull","city": "Borgholzhausen","surname": "","radio_id": 2650003,"id": 2650003,"state": "NRW"},
 {"fname": "Stephan","name": "Stephan","country": "Germany","callsign": "KRÜMEL","city": "Mindetal","surname": "","radio_id": 2650004,"id": 2650004,"state": "Bayern"},
@@ -7,4 +8,5 @@
 {"fname": "Tim","name": "Tim","country": "Germany","callsign": "EGGE02","city": "Nieheim","surname": "Hartmann","radio_id": 2650007,"id": 2650007,"state": "NRW"},
 {"fname": "Tim","name": "Tim","country": "Germany","callsign": "Giftzwerg","city": "Herford","surname": "","radio_id": 2650008,"id": 2650008,"state": "NRW"},
 {"fname": "Benjamin","name": "Benjamin","country": "Germany","callsign": "13EK905","city": "Ebersfelde","surname": "","radio_id": 2650009,"id": 2650009,"state": "Brandenburg"},
-{"fname": "Crosslink","name": "Crosslink","country": "Germany","callsign": "XL1DIG","city": "Nieheim","surname": "N8schicht","radio_id": 2659999,"id": 2659999,"state": "NRW"}]}
+{"fname": "Crosslink","name": "Crosslink","country": "Germany","callsign": "XL1DIG","city": "Nieheim","surname": "N8schicht","radio_id": 2659999,"id": 2659999,"state": "NRW"}
+]}
