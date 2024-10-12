@@ -6,8 +6,8 @@
         {"fname":"Stephan",	"name":"Stephan",	"country":"Germany",	"callsign":"KRUEMEL",	"city":"Mindetal",		"surname":"",		"radio_id":2650004,	"id":2650004,	"state":""},
         {"fname":"Jens",	"name":"Jens",		"country":"Germany",	"callsign":"DW1PBJ",	"city":"Hoevelhof",		"surname":"",		"radio_id":2650005,	"id":2650005,	"state":""},
         {"fname":"Carl",	"name":"Carl",		"country":"Hungary",	"callsign":"Carl",	"city":"",			"surname":"",		"radio_id":2650006,	"id":2650006,	"state":""},
-        {"fname":"Tim",		"name":"Tim",		"country":"Germany",	"callsign":"EGGE02",	"city":"Nieheim",		"surname":"Hartmann",	"radio_id":2650007,	"id":2650007,	"state":""},
-        {"fname":"Tim",		"name":"Tim",		"country":"Germany",	"callsign":"Giftzwerg",	"city":"Herford",		"surname":"",		"radio_id":2650008,	"id":2650008,	"state":""},
+        {"fname":"Tim",		"name":"Tim",		"country":"Germany",	"callsign":"EGGE02",	"city":"Nieheim",		"surname":"Hartmann",	"radio_id":2651007,	"id":2651007,	"state":""},
+        {"fname":"Tim",		"name":"Tim",		"country":"Germany",	"callsign":"Giftzwerg",	"city":"Herford",		"surname":"",		"radio_id":2650110,	"id":2650110,	"state":""},
         {"fname":"Benjamin",	"name":"Benjamin",	"country":"Germany",	"callsign":"13EK905",	"city":"Ebersfelde",		"surname":"",		"radio_id":2650009,	"id":2650009,	"state":""},
 	{"fname":"Stephan",	"name":"Stephan",	"country":"Germany",	"callsign":"13EK925",	"city":"Legoland",		"surname":"",		"radio_id":2650010,	"id":2650010,	"state":""},
         {"fname":"Crosslink",	"name":"Crosslink",	"country":"Germany",	"callsign":"XL1DIG",	"city":"Nieheim",		"surname":"",		"radio_id":2658000,	"id":2658000,	"state":""}
