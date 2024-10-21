@@ -1,8 +1,8 @@
 {
-  "results": [
-    {"id": "id","Callsign": "callsign","TG-id": "tgid"},
-    {"id": "1","Callsign": "LOCAL","TG-id": "TG1"},
-    {"id": "2","Callsign": "LOCAL / CLUSTER","TG-id": "TG2"},
+  "results": [ 
+{"id": "id","Callsign": "callsign","TG-id": "tgid"},
+{"id": "1","Callsign": "LOCAL","TG-id": "TG1"},
+{"id": "2","Callsign": "LOCAL / CLUSTER","TG-id": "TG2"},
 {"id": "3","Callsign": "N/A","TG-id": "TG3"},
 {"id": "4","Callsign": "TECH-TALK LOCAL","TG-id": "TG4"},
 {"id": "5","Callsign": "CROSSLINK TX-RX.de","TG-id": "TG5"},
@@ -861,6 +861,7 @@
 {"id": "26446","Callsign": "MULTIBRIDGE-OWL","TG-id": "TG26446"},
 {"id": "26447","Callsign": "OWL-TALK","TG-id": "TG26447"},
 {"id": "26448","Callsign": "TRUCKER / BF3-4 DRIVER","TG-id": "TG26448"},
+{"id": "265","Callsign": "N8schicht","TG-id": "TG265"},    
 {"id": "26538","Callsign": "NORDHARZ","TG-id": "TG26538"},
 {"id": "26577","Callsign": "GERMANY-DX","TG-id": "TG26577"},
 {"id": "26965","Callsign": "DL-HILDESHEIM GRUPPE","TG-id": "TG26965"},
