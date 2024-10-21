@@ -1,7 +1,4 @@
-{
-  "results": [ 
-{"id": "id","Callsign": "callsign","TG-id": "tgid"},
-{"id": "1","Callsign": "LOCAL","TG-id": "TG1"},
+{"results": [{"id": "1","Callsign": "LOCAL","TG-id": "TG1"},
 {"id": "2","Callsign": "LOCAL / CLUSTER","TG-id": "TG2"},
 {"id": "3","Callsign": "N/A","TG-id": "TG3"},
 {"id": "4","Callsign": "TECH-TALK LOCAL","TG-id": "TG4"},
@@ -1475,6 +1472,4 @@
 {"id": "2654991","Callsign": "EICHSFELDKREIS USER-TG FUNKLEI","TG-id": "TG2654991"},
 {"id": "2621218","Callsign": "USER-TG DB0JSF","TG-id": "TG2621218"},
 {"id": "5059742","Callsign": "XRF740 C TG5059742","TG-id": "TG5059742"},
-{"id": "2654112","Callsign": "USER-TG Teddybaer","TG-id": "TG2654112"}
-]
-}
+{"id": "2654112","Callsign": "USER-TG Teddybaer","TG-id": "TG2654112"}]}
