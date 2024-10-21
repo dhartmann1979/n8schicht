@@ -1,7 +1,8 @@
-[
-{"id": "id","Callsign": "callsign","TG-id": "tgid"},
-{"id": "1","Callsign": "LOCAL","TG-id": "TG1"},
-{"id": "2","Callsign": "LOCAL / CLUSTER","TG-id": "TG2"},
+{
+  "results": [
+    {"id": "id","Callsign": "callsign","TG-id": "tgid"},
+    {"id": "1","Callsign": "LOCAL","TG-id": "TG1"},
+    {"id": "2","Callsign": "LOCAL / CLUSTER","TG-id": "TG2"},
 {"id": "3","Callsign": "N/A","TG-id": "TG3"},
 {"id": "4","Callsign": "TECH-TALK LOCAL","TG-id": "TG4"},
 {"id": "5","Callsign": "CROSSLINK TX-RX.de","TG-id": "TG5"},
@@ -1476,3 +1477,4 @@
 {"id": "5059742","Callsign": "XRF740 C TG5059742","TG-id": "TG5059742"},
 {"id": "2654112","Callsign": "USER-TG Teddybaer","TG-id": "TG2654112"}
 ]
+}
