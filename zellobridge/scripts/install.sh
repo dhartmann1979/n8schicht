@@ -74,8 +74,8 @@ if systemctl cat "$UNIT.service" >/dev/null 2>&1; then
 else
     warn "Dienst ${UNIT} nicht gefunden – das Dashboard zeigt dann nur die Hardware. Später unter Admin → Settings ändern."
 fi
-EXTRA="$(systemctl list-units --type=service --all --no-legend --plain 2>/dev/null | awk '{print $1}' | grep -i -E 'svxlink|asterisk|usrp|analog_bridge' | sed 's/\.service$//' | grep -v -x "$UNIT" | tr '\n' ' ' || true)"
-[ -n "$EXTRA" ] && ok "weitere Dienste: ${EXTRA}" || info "keine weiteren Dienste (SvxLink, Asterisk …) gefunden"
+EXTRA="$(systemctl list-units --type=service --all --no-legend --plain 2>/dev/null | awk '{print $1}' | grep -i -E 'svxlink|usrp' | sed 's/\.service$//' | grep -v -x "$UNIT" | tr '\n' ' ' || true)"
+[ -n "$EXTRA" ] && ok "weitere Dienste: ${EXTRA}" || info "keine weiteren Dienste (SvxLink …) gefunden"
 
 # ---------------------------------------------------------------------------
 step 3 "Programm nach ${DIR}"

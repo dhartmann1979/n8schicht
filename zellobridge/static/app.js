@@ -177,7 +177,7 @@ function renderFlow() {
     const L = S.live, b = L.bridge, sv = bridgeSvc(), c = L.config || {}, t = b.talk;
     const up = sv.active === 'active', zok = ['ready', 'online'].includes(b.zello);
     const extra = (L.services || []).filter(s => !s.bridge);
-    const radioSub = extra.length ? extra.map(s => `${esc(s.unit)} ${s.active === 'active' ? '✓' : '✕'}`).join(' · ') : 'AllStarLink / SvxLink';
+    const radioSub = extra.length ? extra.map(s => `${esc(s.unit)} ${s.active === 'active' ? '✓' : '✕'}`).join(' · ') : 'SvxLink';
     const z = ZST[b.zello] || ZST.unknown;
     $('flow').innerHTML = `
         <div class="node ${t && t.dir === 'rf' ? 'hot' : ''}"><div class="ic">📻</div><div class="t">Radio</div><div class="s">${radioSub}</div>

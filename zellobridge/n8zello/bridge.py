@@ -2,7 +2,7 @@
 Live state of asl-zello-bridge (github.com/mattmelling/asl-zello-bridge), read from
 its systemd journal. The bridge logs every key-up and key-down:
 
-  INFO:ZelloController:Keyed:USRP              radio (AllStarLink/SvxLink via USRP) talks into Zello
+  INFO:ZelloController:Keyed:USRP              radio (SvxLink via USRP) talks into Zello
   INFO:ZelloController:UnKeyed:USRP (12.3s)
   INFO:ZelloController:Keyed:DL1ABC            a Zello user talks to the radio side
   INFO:ZelloController:UnKeyed:DL1ABC (8.0s)

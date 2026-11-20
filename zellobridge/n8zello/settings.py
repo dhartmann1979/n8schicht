@@ -36,14 +36,14 @@ SECTIONS = [
 
 FIELDS: List[Field] = [
     Field("dashboard.title", "dashboard", "Title", "text", "N8 ZelloBridge"),
-    Field("dashboard.subtitle", "dashboard", "Subtitle", "text", "AllStarLink / SvxLink ⇄ Zello"),
+    Field("dashboard.subtitle", "dashboard", "Subtitle", "text", "SvxLink ⇄ Zello"),
     Field("dashboard.public", "dashboard", "Public view", "bool", True, "On: everybody in the network sees the dashboard without login"),
     Field("dashboard.show_users", "dashboard", "Show Zello user names publicly", "bool", True),
     Field("dashboard.session_hours", "dashboard", "Login valid for (hours)", "int", 12, min=1, max=720),
     Field("bridge.service", "bridge", "Bridge service", "text", "asl-zello-bridge", "systemd unit of the bridge",
           pattern=r"[A-Za-z0-9@._-]+"),
     Field("bridge.extra", "bridge", "Further services", "text", "auto",
-          "Comma separated, e.g. svxlink, asterisk. auto = every svxlink/asterisk/usrp service found", pattern=r"[A-Za-z0-9@._, -]*"),
+          "Comma separated, e.g. svxlink. auto = every SvxLink/USRP service found", pattern=r"[A-Za-z0-9@._, -]*"),
     Field("bridge.iface", "bridge", "Network interface", "text", "auto", "For the traffic graph; auto = the one with the default route",
           pattern=r"[A-Za-z0-9._-]+"),
     Field("data.talk_days", "data", "Keep talks (days)", "int", 400, min=7, max=3650),

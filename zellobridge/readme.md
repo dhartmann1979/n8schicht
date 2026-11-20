@@ -21,7 +21,7 @@
 
 ## Was ist das?
 
-Die **ZelloBridge** der N8schicht verbindet die Funkseite (SvxLink bzw. AllStarLink über USRP) mit einem Zello-Kanal. Sie läuft mit [asl-zello-bridge](https://github.com/mattmelling/asl-zello-bridge) von G4IYT auf einem **Asus Tinker Board** unter DietPi. Dieses Dashboard zeigt alles, was dort passiert:
+Die **ZelloBridge** der N8schicht verbindet die Funkseite (SvxLink über USRP) mit einem Zello-Kanal. Sie läuft mit [asl-zello-bridge](https://github.com/mattmelling/asl-zello-bridge) von G4IYT auf einem **Asus Tinker Board** unter DietPi. Dieses Dashboard zeigt alles, was dort passiert:
 
 | | |
 |---|---|

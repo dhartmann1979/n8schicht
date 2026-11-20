@@ -211,7 +211,7 @@ class Services:
         for line in out.splitlines():
             name = line.split()[0] if line.split() else ""
             base = name.removesuffix(".service")
-            if base != bridge and any(k in base.lower() for k in ("svxlink", "asterisk", "usrp", "analog_bridge", "allmon")):
+            if base != bridge and any(k in base.lower() for k in ("svxlink", "usrp")):
                 found.append(base)
         return found[:6]
 
@@ -269,7 +269,7 @@ class Services:
                     "ActiveEnterTimestamp": started, "Description": "SvxLink repeater control software", "Environment": "",
                     "MemoryCurrent": "14200832", "UnitFileState": "enabled"}
         return {"Id": f"{unit}.service", "ActiveState": "active", "SubState": "running", "MainPID": "315", "NRestarts": "2",
-                "ActiveEnterTimestamp": started, "Description": "AllStarLink Zello Bridge", "MemoryCurrent": "35651584",
+                "ActiveEnterTimestamp": started, "Description": "SvxLink Zello Bridge", "MemoryCurrent": "35651584",
                 "UnitFileState": "enabled", "FragmentPath": "/etc/systemd/system/asl-zello-bridge.service",
                 "DropInPaths": "/etc/systemd/system/asl-zello-bridge.service.d/override.conf",
                 "Environment": 'USRP_BIND=127.0.0.1 USRP_HOST=127.0.0.1 USRP_RXPORT=34001 USRP_TXPORT=32001 ZELLO_USERNAME=n8schicht-bridge '

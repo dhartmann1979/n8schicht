@@ -34,7 +34,7 @@ Der Dienstbenutzer darf per sudoers-Regel genau diese Dienste steuern und nichts
 | Show Zello user names publicly | an | aus = ohne Login nur „Zello“ |
 | Login valid for | 12 h | |
 | Bridge service | asl-zello-bridge | systemd-Dienst der Bridge |
-| Further services | auto | `auto` = alle SvxLink-/Asterisk-/USRP-Dienste, sonst Liste |
+| Further services | auto | `auto` = alle SvxLink-/USRP-Dienste, sonst Liste |
 | Network interface | auto | für den Netzwerk-Verlauf |
 | Keep talks / events / hardware values | 400 / 60 / 31 Tage | |
 
