@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0b1224">
+    <title>N8 ZelloBridge</title>
+    <link rel="icon" href="/static/n8-zellobridge-icon.svg">
+    <link rel="apple-touch-icon" href="/static/n8-zellobridge-icon-192.png">
+    <link rel="stylesheet" href="/static/app.css?v={{V}}">
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="brand">
+            <img src="/static/n8-zellobridge-icon.svg?v={{V}}" alt="N8 ZelloBridge">
+            <div>
+                <h1 id="title">N8 ZelloBridge</h1>
+                <div class="sub" id="subtitle">&nbsp;</div>
+            </div>
+        </div>
+        <div class="chips">
+            <span class="chip" id="chipLive">Live data</span>
+            <span class="chip" id="chipSvc">Bridge</span>
+            <span class="chip" id="chipZello">Zello</span>
+            <span class="chip" id="chipAir">Quiet</span>
+            <span id="userArea"></span>
+        </div>
+    </header>
+
+    <div class="banner warn hidden" id="setupBanner">
+        <span>🧭 <b>No superadmin yet.</b> Run the guided installation on the board: <code>sudo ./scripts/install.sh</code> – or <code>sudo n8zello set-superadmin NAME</code>.</span>
+    </div>
+
+    <nav class="tabs" id="mainTabs">
+        <button data-tab="live" class="active">🎙️ Live</button>
+        <button data-tab="stats">📈 <span class="t-long">Statistics</span><span class="t-short">Stats</span></button>
+        <button data-tab="hw">🖥️ <span class="t-long">Hardware</span><span class="t-short">HW</span></button>
+        <button data-tab="admin" id="tabAdminBtn" class="hidden">⚙️ Admin</button>
+    </nav>
+
+    <!-- ================= LIVE ================= -->
+    <section id="tab-live">
+        <h2 class="section-header collapsible" data-section="today"><span class="collapse-caret">▾</span>Today</h2>
+        <div class="stats-bar" data-body="today">
+            <div class="stat"><div class="k">🎙️ Talks</div><div class="v" id="sTalks">–</div></div>
+            <div class="stat"><div class="k">⏱️ Airtime</div><div class="v" id="sAir">–</div></div>
+            <div class="stat"><div class="k">📻 Radio → Zello</div><div class="v" id="sRf">–</div></div>
+            <div class="stat"><div class="k">💬 Zello → Radio</div><div class="v" id="sZello">–</div></div>
+            <div class="stat"><div class="k">👥 Zello users</div><div class="v" id="sUsers">–</div></div>
+            <div class="stat"><div class="k">🌉 Bridge up</div><div class="v" id="sUp">–</div></div>
+        </div>
+
+        <h2 class="section-header collapsible" data-section="bridge"><span class="collapse-caret">▾</span>Bridge</h2>
+        <div data-body="bridge">
+            <div class="flow" id="flow"></div>
+            <div class="air" id="air"></div>
+        </div>
+
+        <div class="grid live-top">
+            <div>
+                <h2 class="section-header collapsible" data-section="lh"><span class="collapse-caret">▾</span>Last heard
+                    <span class="seg" id="lhFilter" style="margin-left:auto" onclick="event.stopPropagation()"><button data-v="all" class="active">All</button><button data-v="rf">📻 Radio</button><button data-v="zello">💬 Zello</button></span></h2>
+                <div class="card" data-body="lh"><div class="tbl-wrap"><table class="tbl">
+                    <thead><tr><th>Time</th><th>Direction</th><th>From</th><th class="num">Duration</th></tr></thead>
+                    <tbody id="lhBody"><tr><td colspan="4" class="empty">Nothing heard yet.</td></tr></tbody>
+                </table></div></div>
+                <h2 class="section-header collapsible" data-section="events"><span class="collapse-caret">▾</span>Events</h2>
+                <div class="card" data-body="events"><div class="feed" id="feed"></div></div>
+            </div>
+            <div>
+                <h2 class="section-header collapsible" data-section="hwlive"><span class="collapse-caret">▾</span>Tinker Board</h2>
+                <div class="card" data-body="hwlive"><div class="gauges" id="gauges"></div><div class="kv" id="hwKv" style="margin-top:12px"></div></div>
+                <h2 class="section-header collapsible" data-section="svc"><span class="collapse-caret">▾</span>Services</h2>
+                <div class="card" data-body="svc" id="svcList"></div>
+                <h2 class="section-header collapsible" data-section="cfg"><span class="collapse-caret">▾</span>Zello channel</h2>
+                <div class="card" data-body="cfg"><div class="kv" id="cfgKv"></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= STATISTICS ================= -->
+    <section id="tab-stats" class="hidden">
+        <h2 class="section-header">📈 Statistics</h2>
+        <div class="card" style="padding:16px">
+            <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;margin-bottom:14px">
+                <div class="seg" id="stRange"><button data-v="today">Today</button><button data-v="24h" class="active">24 h</button><button data-v="7d">7 days</button><button data-v="30d">30 days</button><button data-v="1y">1 year</button></div>
+                <div class="seg" id="stMetric"><button data-v="airtime" class="active">⏱️ Airtime</button><button data-v="talks">🎙️ Talks</button></div>
+            </div>
+            <div class="kpis">
+                <div class="kpi"><div class="k">🎙️ Talks</div><div class="v" id="kTalks">–</div></div>
+                <div class="kpi"><div class="k">⏱️ Airtime</div><div class="v" id="kAir">–</div></div>
+                <div class="kpi"><div class="k">📻 Radio → Zello</div><div class="v" id="kRf">–</div></div>
+                <div class="kpi"><div class="k">💬 Zello → Radio</div><div class="v" id="kZello">–</div></div>
+            </div>
+            <div class="panel"><h3><span>Traffic through the bridge</span><small id="stNote"></small></h3>
+                <div class="legend"><span><i style="background:#ff9f0a"></i>📻 Radio → Zello</span><span><i style="background:#30d158"></i>💬 Zello → Radio</span></div>
+                <div class="chart" id="stBars"></div></div>
+            <div class="grid g2" style="margin-top:14px">
+                <div class="panel"><h3><span>Time of day</span><small>talks per hour</small></h3><div class="chart" id="stHours"></div></div>
+                <div class="panel"><h3><span>Most active Zello users</span></h3><div class="tbl-wrap"><table class="tbl">
+                    <thead><tr><th>User</th><th class="num">Talks</th><th class="num">Airtime</th><th class="hide-sm">Last</th></tr></thead><tbody id="stTop"></tbody></table></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= HARDWARE ================= -->
+    <section id="tab-hw" class="hidden">
+        <h2 class="section-header">🖥️ Hardware <span class="seg" id="hwRange" style="margin-left:auto"><button data-v="24h" class="active">24 h</button><button data-v="7d">7 days</button><button data-v="30d">30 days</button></span></h2>
+        <div class="grid g2">
+            <div class="card"><h3 class="dim" style="margin:0 0 10px;font-size:12px;letter-spacing:.06em;text-transform:uppercase">⚙️ CPU cores (live)</h3><div class="cores" id="cores"></div>
+                <div class="kv" id="hwInfo" style="margin-top:14px"></div></div>
+            <div class="card"><h3 class="dim" style="margin:0 0 10px;font-size:12px;letter-spacing:.06em;text-transform:uppercase">🌡️ Temperatures & memory</h3><div class="kv" id="hwTemps"></div></div>
+        </div>
+        <div class="grid g2" style="margin-top:14px">
+            <div class="panel"><h3><span>CPU load</span><small>% · bridge process</small></h3><div class="chart" id="hwCpu"></div></div>
+            <div class="panel"><h3><span>Temperature</span><small>°C</small></h3><div class="chart" id="hwTemp"></div></div>
+            <div class="panel"><h3><span>Memory</span><small>used</small></h3><div class="chart" id="hwMem"></div></div>
+            <div class="panel"><h3><span>Network</span><small id="hwNetNote">↓ in · ↑ out</small></h3><div class="chart" id="hwNet"></div></div>
+        </div>
+    </section>
+
+    <!-- ================= ADMIN ================= -->
+    <section id="tab-admin" class="hidden">
+        <nav class="tabs sub" id="adminTabs">
+            <button data-a="services" class="active">🌉 Services</button>
+            <button data-a="settings">⚙️ Settings</button>
+            <button data-a="backup">💾 Backup</button>
+            <button data-a="users">👥 Admins</button>
+            <button data-a="audit">🔐 Sessions &amp; log</button>
+        </nav>
+        <div id="admin-services"></div>
+        <div id="admin-settings" class="hidden"></div>
+        <div id="admin-backup" class="hidden"></div>
+        <div id="admin-users" class="hidden"></div>
+        <div id="admin-audit" class="hidden"></div>
+    </section>
+
+    <footer>N8 ZelloBridge <span id="ver"></span> · asl-zello-bridge by G4IYT · Design: DMR Die N8schicht</footer>
+</div>
+<div class="tip" id="tip"></div>
+<div id="modalRoot"></div>
+<script src="/static/app.js?v={{V}}"></script>
+</body>
+</html>

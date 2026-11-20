@@ -1,0 +1,24 @@
+[Unit]
+Description=N8 ZelloBridge – dashboard for asl-zello-bridge (DMR Die N8schicht)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=n8zello
+Group=n8zello
+WorkingDirectory=/opt/n8zello
+Environment=N8ZELLO_DATA=/var/lib/n8zello
+Environment=N8ZELLO_PORT=80
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/usr/bin/python3 -m n8zello
+# web port 80 without root
+AmbientCapabilities=CAP_NET_BIND_SERVICE
+Restart=always
+RestartSec=3
+# the board has little memory: keep the dashboard small
+MemoryMax=96M
+Nice=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,22 @@
+#!/bin/bash
+# N8 ZelloBridge backup helper – runs as root (via sudo from the dashboard or by hand).
+# Writes a .tar.gz to stdout (or to the file given as $1) with everything needed to set the bridge up again:
+#   unit + drop-ins of the bridge, the Zello key file, SvxLink configuration, the dashboard database.
+set -euo pipefail
+OUT="${1:--}"
+UNIT="$(sed -n 's/^BRIDGE=//p' /etc/n8zello.conf 2>/dev/null || true)"; UNIT="${UNIT:-asl-zello-bridge}"
+FILES=()
+add() { for f in "$@"; do [ -e "$f" ] && FILES+=("${f#/}"); done; return 0; }
+FRAG="$(systemctl show "$UNIT.service" -p FragmentPath --value 2>/dev/null || true)"
+DROP="$(systemctl show "$UNIT.service" -p DropInPaths --value 2>/dev/null || true)"
+add "$FRAG" $DROP
+KEY="$( (systemctl show "$UNIT.service" -p Environment --value 2>/dev/null || true) | tr ' ' '\n' | sed -n 's/^ZELLO_PRIVATE_KEY=//p' | head -1)" || KEY=""
+[ -n "$KEY" ] && add "$KEY"
+add /etc/svxlink /root/svxlink-usrp.sh /etc/systemd/system/svxlink*.service /etc/systemd/system/svxlink*.service.d
+add /var/lib/n8zello/n8zello-backup.db /etc/n8zello.conf
+[ ${#FILES[@]} -gt 0 ] || { echo "nothing to back up" >&2; exit 1; }
+if [ "$OUT" = "-" ]; then
+    tar czf - -C / "${FILES[@]}" 2>/dev/null
+else
+    umask 077; tar czf "$OUT" -C / "${FILES[@]}" 2>/dev/null; echo "$OUT"
+fi

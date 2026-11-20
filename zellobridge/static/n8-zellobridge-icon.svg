@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="N8 ZelloBridge">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#14204a"/>
+      <stop offset="0.55" stop-color="#0c1230"/>
+      <stop offset="1" stop-color="#251055"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.3" cy="0.28" r="0.6">
+      <stop offset="0" stop-color="#ffd60a" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#ffd60a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="moon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff3b0"/>
+      <stop offset="0.5" stop-color="#ffd60a"/>
+      <stop offset="1" stop-color="#ff9f0a"/>
+    </linearGradient>
+    <linearGradient id="wave" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5ac8fa"/>
+      <stop offset="1" stop-color="#0a84ff"/>
+    </linearGradient>
+    <linearGradient id="txt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#c9dcff"/>
+    </linearGradient>
+    <mask id="crescent">
+      <rect width="512" height="512" fill="#fff"/>
+      <circle cx="186" cy="118" r="70" fill="#000"/>
+    </mask>
+    <clipPath id="badge"><rect x="16" y="16" width="480" height="480" rx="112"/></clipPath>
+  </defs>
+
+  <!-- night-sky badge -->
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="url(#sky)"/>
+  <g clip-path="url(#badge)">
+    <circle cx="150" cy="150" r="260" fill="url(#glow)"/>
+    <!-- stars -->
+    <g fill="#ffffff">
+      <circle cx="300" cy="78" r="3.2" opacity="0.9"/>
+      <circle cx="300" cy="200" r="2.4" opacity="0.7"/>
+      <circle cx="80" cy="270" r="2.2" opacity="0.6"/>
+      <circle cx="250" cy="150" r="1.8" opacity="0.6"/>
+      <circle cx="440" cy="300" r="2" opacity="0.5"/>
+      <path d="M262 54 l5 13 13 5 -13 5 -5 13 -5 -13 -13 -5 13 -5z" opacity="0.95"/>
+    </g>
+    <!-- horizon -->
+    <path d="M16 452 Q256 412 496 452 L496 496 L16 496z" fill="#070a1c" opacity="0.6"/>
+  </g>
+
+  <!-- crescent moon -->
+  <circle cx="142" cy="146" r="78" fill="url(#moon)" mask="url(#crescent)"/>
+
+  <!-- antenna mast with radio waves -->
+  <g transform="translate(404 150)">
+    <g fill="none" stroke="url(#wave)" stroke-width="11" stroke-linecap="round">
+      <path d="M-30 -30 A42 42 0 0 0 -30 30" opacity="1"/>
+      <path d="M30 -30 A42 42 0 0 1 30 30" opacity="1"/>
+      <path d="M-52 -52 A74 74 0 0 0 -52 52" opacity="0.65"/>
+      <path d="M52 -52 A74 74 0 0 1 52 52" opacity="0.65"/>
+    </g>
+    <circle r="12" fill="#5ac8fa"/>
+    <path d="M0 10 L-18 70 M0 10 L18 70 M-11 44 L11 44" stroke="#9fb7e8" stroke-width="7" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- speech bubble: Zello -->
+  <g transform="translate(378 248) scale(0.92)">
+    <path d="M0 0 h64 a14 14 0 0 1 14 14 v28 a14 14 0 0 1 -14 14 h-30 l-16 14 v-14 h-18 a14 14 0 0 1 -14 -14 v-28 a14 14 0 0 1 14 -14z"
+          fill="#ff9f0a" opacity="0.95" transform="translate(14 0)"/>
+    <circle cx="34" cy="28" r="5" fill="#fff"/><circle cx="52" cy="28" r="5" fill="#fff"/><circle cx="70" cy="28" r="5" fill="#fff"/>
+  </g>
+
+  <!-- N8 -->
+  <text x="228" y="392" text-anchor="middle"
+        font-family="'SF Pro Display','Inter','Segoe UI','Helvetica Neue',Arial,sans-serif"
+        font-weight="900" font-size="210" letter-spacing="-8" fill="url(#txt)">N<tspan fill="url(#moon)">8</tspan></text>
+
+  <!-- ZELLO pill -->
+  <rect x="136" y="414" width="200" height="44" rx="22" fill="#ff9f0a" opacity="0.95"/>
+  <text x="236" y="445" text-anchor="middle"
+        font-family="'SF Pro Display','Inter','Segoe UI','Helvetica Neue',Arial,sans-serif"
+        font-weight="800" font-size="27" letter-spacing="5" fill="#ffffff">ZELLO</text>
+</svg>
